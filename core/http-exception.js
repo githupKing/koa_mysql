@@ -13,7 +13,7 @@ class Parametarxception extends HttpException{
         this.errorCode = errorCode || 10000
     }
 }
-module.export = {
-    httpException,
+module.exports = {
+    HttpException,
     Parametarxception
 }
