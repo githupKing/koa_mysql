@@ -6,9 +6,9 @@ const {Sequelize,Model} = require('sequelize')
 
 class User extends Model{
 	static async verifyEmailPassword(email,plainPassword){
-		const user = User.findOne({
+		const user = await User.findOne({
 			where:{
-				email
+				email:email
 			}
 		})
 		if (!user) {

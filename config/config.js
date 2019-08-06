@@ -6,10 +6,10 @@ module.exports={
 		host:'localhost',
 		port:3306,
 		user:'root',
-		password:'992211wyp'
+		password:'Admin_2017'
 	},
 	security:{
 		secretKey:"asdaks",
-		expiresIn:60*60
+		expiresIn:60*60*24
 	}
 }

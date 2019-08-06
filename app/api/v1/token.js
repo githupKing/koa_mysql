@@ -10,11 +10,11 @@ const router = new Router({
 
 router.post('/',async(ctx)=>{
 	let token;
-	const v = TokenValidator().validate(ctx);
+	const v = await new TokenValidator().validate(ctx);
 	switch(v.get('body.type')){
 		case LoginType.USER_EMAIL:
-		 	token = emailLogin(v.get('body.account'),v.get('body.secret'))
-		case Location.USER_MINI_PROGRAM:
+		 	token =await emailLogin(v.get('body.account'),v.get('body.secret'))
+		case LoginType.USER_MINI_PROGRAM:
 			break;
 		default:
 			throw new global.errs.ParameterException('没有相应的处理函数')
