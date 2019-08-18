@@ -3,10 +3,10 @@ module.exports={
 	environment:'dev',
 	database:{
 		dbName:'8yue',
-		host:'localhost',
+		host:'47.108.77.113',
 		port:3306,
 		user:'root',
-		password:'Admin_2017'
+		password:'992211Wyp!'
 	},
 	security:{
 		secretKey:"asdaks",
